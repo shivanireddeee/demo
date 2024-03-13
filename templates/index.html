@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Form</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Data from Supabase</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+                <td><button onclick="deleteRecord({{row.id}})">Delete</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        async function deleteRecord(id) {
+            await fetch(`/delete/${id}`, { method: 'DELETE' });
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
