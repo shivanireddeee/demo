@@ -38,10 +38,21 @@ def delete_record(id):
     response = supabase.table('test').delete().eq('id', id).execute()
     return redirect('/')
 
-# @app.route('/update/<int:id>', methods=['UPDATE'])
-# def update_record(id):
-#     response = supabase.table('test').update({'id': 'id'}).eq('id', id).execute()
-#     return redirect('/')
+
+
+@app.route('/update', methods=['POST'])
+def update_data():
+    id = request.form['id']
+    name = request.form['name']
+    response = supabase.table('test').update({'name': name}).eq('id', id).execute()
+    return redirect('/')
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,130 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+            background-image: url('https://t3.ftcdn.net/jpg/02/44/56/70/360_F_244567019_SRb5i27LHFzblS6dpOhDUu8nsdRgmgh5.jpg');
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            height: 94vh;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .left {
+            flex: 3;           
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align input fields */
+            background: rgba(255, 255, 255, 0.5);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.1px);
+-webkit-backdrop-filter: blur(8.1px);
+
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+            width: 300px;
+            margin: 0 auto; /* Center align input fields */
+            autocomplete: off; /* Disable suggestions */
+        }
+        input[type="submit"] {
+            background-color: #0a816d;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 120px;
+            margin-top:20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #47a84c;
+        }
+        .right {
+            margin-top: 20px;
+            flex: 5.5;
+            margin-right: 20px;
+            overflow-y: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensure the header is relative to this container */
+            margin-bottom: 10px; /* Reduce space below table */
+            height: 594px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.1px);
+            -webkit-backdrop-filter: blur(8.1px);
+        }
+        .right-header {
+            position: fixed; /* Fix the header */
+            z-index: 100;
+            width:890px;
+            text-align: center; /* Center align the headings */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 80px; /* Adjust margin to reduce space below table */
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.1px);
+            -webkit-backdrop-filter: blur(8.1px);
+            border: 1px solid rgb(113, 159, 150);
+        }
+        th, td {
+            border: 1.5px solid #2a7570;
+            padding: 8px;
+            text-align: left;
+            width: 33%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        td{
+            background-color: #b5e1da;   
+        }
+        th {
+            background-color: #0a816de7;
+            color: white;
+        }
+        button {
+            background-color: #ebc932;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:  #ffbf00;
+        }
+    
